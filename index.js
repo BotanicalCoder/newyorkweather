@@ -74,7 +74,7 @@ const displayResult = () => {
   description_dom.innerHTML = description;
   icon_dom.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${icon}@6x.png`
+    `https://openweathermap.org/img/wn/${icon}@4x.png`
   );
   currweatherCondition_dom.innerHTML = `weather description: ${weatherCondition.main}`;
   speed_dom.innerHTML = `wind speed in meters per seconds: ${speed}`;
