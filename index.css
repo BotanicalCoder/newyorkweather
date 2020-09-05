@@ -51,19 +51,19 @@ body {
   font-size: 9vh;
   margin-top: 0em;
   padding:0em;
-  margin-left:-1em;
+  margin-left:-0.5em;
 }
 
 
 
 .sub {
-  font-size: 1.5vh;
+  font-size: 2vh;
   margin-top: 2em;
   margin-left: -3em;
 }
 
 .sup {
-  font-size: 3vh;
+  font-size: 4vh;
   margin-top: -2em;
   margin-left: 0em;
 }
