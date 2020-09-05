@@ -51,7 +51,7 @@ body {
   font-size: 9vh;
   margin-top: 0em;
   padding:0em;
-  margin-left:-0.5em;
+  margin-left:0em;
 }
 
 
@@ -124,4 +124,11 @@ ul li {
     padding: 0.5em;
     margin-bottom: 1em;
   }
+  
+  .temperature {
+  font-size: 9vh;
+  margin-top: 0em;
+  padding:0em;
+  margin-left:-0.5em;
+}
 }
