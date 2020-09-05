@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link href="index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="weather app" />
+    <meta name="application-name" content="weather app" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>weather-app</title>
+  </head>
+  <body onload="displayResult();">
+    <header class="header">
+      <h3>CURRENT WEATHER CONDITIONS IN NEW-YORK CITY</h3>
+      <button id="update">latest weather updates</button>
+    </header>
+    <main class="flex-container">
+      <section class="box-1">
+        <div class="iconholder">
+          <img src="" alt="weather icon" id="icon" />
+        </div>
+        <br />
+        <h1 class="temperature">
+          <span id="temp">59</span>
+          <sup class="sup">0</sup> <sub class="sub">c</sub>
+        </h1>
+        <br />
+        <p id="description">description</p>
+      </section>
+
+      <article class="box-2">
+        <ul>
+          <li id="currweatherCondition">currweatherCondition</li>
+          <li id="speed">windspeed</li>
+          <li id="deg">deg</li>
+          <li id="visibility">visibility</li>
+        </ul>
+      </article>
+      <article class="box-3">
+        <ul>
+          <li id="feels_like">feels_like</li>
+          <li id="humidity">humidity</li>
+          <li id="pressure">pressure</li>
+          <li id="temp_min">temp_min</li>
+          <li id="temp_max">temp_max</li>
+        </ul>
+      </article>
+    </main>
+    <footer></footer>
+    <script src="/ignore.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>

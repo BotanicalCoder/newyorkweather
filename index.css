@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 2em;
+  font-size: xx-large;
+  background-color: #424242;
+  color: #e2e0e0;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-top: 2em;
+}
+
+.box-1 {
+  background-color: #5f5c5c;
+  width: 25%;
+  padding: 1em;
+}
+
+.box-2 {
+  background-color: #5f5c5c;
+  margin-left: 0.5em;
+  width: 35%;
+  padding: 1em;
+}
+
+.box-3 {
+  background-color: #5f5c5c;
+  margin-left: 0.5em;
+  width: 35%;
+  padding: 1em;
+}
+
+.header h3 {
+  margin-top: -1.6em;
+  text-align: center;
+  word-spacing: 2vw;
+}
+
+.iconholder {
+  margin-top: 0.3em;
+}
+
+.temperature {
+  font-size: small;
+  font-size: 10vh;
+  margin-top: -1.5em;
+}
+
+.sub {
+  font-size: 3vh;
+  margin-top: 2em;
+  margin-left: -3em;
+}
+
+.sup {
+  font-size: 7vh;
+  margin-top: -2em;
+  margin-left: 0em;
+}
+
+ul li {
+  text-transform: capitalize;
+  list-style-type: none;
+  padding: 1em;
+
+  /* text-decoration: underline;*/
+}
+
+#update {
+  text-align: center;
+  max-width: 50%;
+  padding: 0.5em;
+  font-size: large;
+  margin-top: 1em;
+  text-transform: capitalize;
+}
+
+/*media break point for devices smaller than or equal to tabs*/
+@media only screen and (max-width: 988px) {
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 1.9em;
+    font-size: xx-large;
+    background-color: #424242;
+    color: #e2e0e0;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 2em;
+  }
+  .box-1 {
+    background-color: #5f5c5c;
+    width: 80vw;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-left: -0.5em;
+  }
+
+  .box-2 {
+    background-color: #5f5c5c;
+    margin-left: -0.5em;
+    width: 80vw;
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .box-3 {
+    background-color: #5f5c5c;
+    margin-left: -0.5em;
+    width: 80vw;
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+}
