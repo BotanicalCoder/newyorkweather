@@ -47,26 +47,27 @@ body {
   margin-top: 0.3em;
 }
 
-.temperature {
+
+ .temperature {
   font-size: 9vh;
   margin-top: 0em;
   padding:0em;
-  margin-left:0em;
+  margin-left:-0.5em;
 }
-
-
-
-.sub {
-  font-size: 3.5vh;
+  
+  .sub {
+  font-size: 1.5vh;
   margin-top: 2em;
   margin-left: -4em;
 }
 
 .sup {
-  font-size: 7vh;
+  font-size: 3vh;
   margin-top: -2em;
   margin-left: 1em;
 }
+
+
 
 ul li {
   text-transform: capitalize;
@@ -124,23 +125,25 @@ ul li {
     padding: 0.5em;
     margin-bottom: 1em;
   }
-  
-  .temperature {
+.temperature {
   font-size: 9vh;
   margin-top: 0em;
   padding:0em;
-  margin-left:-0.5em;
+  margin-left:0em;
 }
-  
-  .sub {
-  font-size: 1.5vh;
+
+
+
+.sub {
+  font-size: 3.5vh;
   margin-top: 2em;
   margin-left: -4em;
 }
 
 .sup {
-  font-size: 3vh;
+  font-size: 7vh;
   margin-top: -2em;
   margin-left: 1em;
-}
+}  
+ 
 }
