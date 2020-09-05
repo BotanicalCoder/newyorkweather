@@ -48,7 +48,7 @@ body {
 }
 
 .temperature {
-  font-size: small;
+  font-size: 9vh;
   margin-top: 0em;
   padding:0em;
   margin-left:-1em;
