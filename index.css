@@ -57,13 +57,13 @@ body {
 
 
 .sub {
-  font-size: 1.5vh;
+  font-size: 3.5vh;
   margin-top: 2em;
   margin-left: -4em;
 }
 
 .sup {
-  font-size: 3vh;
+  font-size: 7vh;
   margin-top: -2em;
   margin-left: 1em;
 }
@@ -130,5 +130,17 @@ ul li {
   margin-top: 0em;
   padding:0em;
   margin-left:-0.5em;
+}
+  
+  .sub {
+  font-size: 1.5vh;
+  margin-top: 2em;
+  margin-left: -4em;
+}
+
+.sup {
+  font-size: 3vh;
+  margin-top: -2em;
+  margin-left: 1em;
 }
 }
