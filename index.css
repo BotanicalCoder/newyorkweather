@@ -50,8 +50,10 @@ body {
 .temperature {
   font-size: small;
   font-size: 10vh;
-  margin-top: -1.5em;
+  margin-top: 0.5em;
 }
+
+
 
 .sub {
   font-size: 3vh;
