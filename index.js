@@ -1,9 +1,3 @@
-let updateButton = document.getElementById("update");
-
-//icon.setAttribute("src", `https://openweathermap.org/img/wn/${icon}@3x.png`);
-
-let arr = [];
-
 /*set data from local storage*/
 
 const setResult = (...data) => {
@@ -12,15 +6,6 @@ const setResult = (...data) => {
   displayResult();
 
   console.log("hiiii");
-  /*
-  const [weather, main, wind, visibility] = data;
-
-  const { id, description, icon, ...weatherCondition } = weather;
-
-  const { feels_like, humidity, pressure, temp, temp_min, temp_max } = main;
-
-  const { speed, deg } = wind;
-  console.log(wind);*/
 };
 
 /*get data from local storage*/
@@ -36,7 +21,7 @@ const getResult = () => {
 
 const displayResult = () => {
   getResult();
-  const [weather, main, wind, visibility] = data;
+  const [weather, main, wind, visibility, name] = data;
 
   const { id, description, icon, ...weatherCondition } = weather;
 
@@ -51,6 +36,7 @@ const displayResult = () => {
   let temp_dom = document.getElementById("temp");
   let temp_min_dom = document.getElementById("temp_min");
   let temp_max_dom = document.getElementById("temp_max");
+  let city_name_dom = document.getElementById("city");
 
   /*weather_object dom elements*/
   let description_dom = document.getElementById("description");
@@ -65,40 +51,48 @@ const displayResult = () => {
   let visibility_dom = document.getElementById("visibility");
 
   /*assigning the value of the get request to the dom elements */
-  feels_like_dom.innerHTML = `feels like: ${feels_like} celcius`;
-  humidity_dom.innerHTML = `humidity: ${humidity}`;
-  pressure_dom.innerHTML = `pressure: ${pressure}`;
+  city_name_dom.innerHTML = `City: ${name}`;
+  feels_like_dom.innerHTML = `Feels like: ${feels_like}  <sup>o</sup>C`;
+  humidity_dom.innerHTML = `Humidity: ${humidity} %`;
+  pressure_dom.innerHTML = `Pressure: ${pressure} hPa`;
   temp_dom.innerHTML = temp;
-  temp_min_dom.innerHTML = `min temperature in celcius: ${temp_min}`;
-  temp_max_dom.innerHTML = `max temperature in celcius: ${temp_max}`;
+  temp_min_dom.innerHTML = `Min temp: ${temp_min}  <sup>o</sup>C`;
+  temp_max_dom.innerHTML = `Max temp: ${temp_max}  <sup>o</sup>C`;
   description_dom.innerHTML = description;
   icon_dom.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${icon}@4x.png`
+    `https://openweathermap.org/img/wn/${icon}@2x.png`
   );
-  currweatherCondition_dom.innerHTML = `weather description: ${weatherCondition.main}`;
-  speed_dom.innerHTML = `wind speed in meters per seconds: ${speed}`;
-  deg_dom.innerHTML = `wind degree: ${deg}`;
-  visibility_dom.innerHTML = `visibility in meters: ${visibility}`;
+  currweatherCondition_dom.innerHTML = `Weather description: ${weatherCondition.main}`;
+  speed_dom.innerHTML = `Wind speed: ${speed} m/s`;
+  deg_dom.innerHTML = `Wind degree: ${deg}`;
+  visibility_dom.innerHTML = `Visibility : ${visibility} m`;
 
   console.log("result displayed");
 };
 
 const updateUi = () => {
+  let updateCity = document.getElementById("searchValue").value;
+
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&units=metric&appid=${key}`;
+
   console.log("ui updated");
+  console.log(updateCity);
 
   fetch(url)
     .then(function (result) {
       return result.json();
     })
     .then(function (json) {
-      const { weather, main, wind, visibility } = json;
-      setResult(...weather, main, wind, visibility);
+      const { weather, main, wind, visibility, name } = json;
+      setResult(...weather, main, wind, visibility, name);
     })
     .catch(function (error) {
       console.error();
     });
 };
+
+let updateButton = document.getElementById("newupdate");
 
 updateButton.addEventListener("click", updateUi);
 
