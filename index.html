@@ -17,8 +17,14 @@
   </head>
   <body onload="displayResult();">
     <header class="header">
-      <h3>CURRENT WEATHER CONDITIONS IN NEW-YORK CITY</h3>
-      <button id="update">latest weather updates</button>
+      <h3>WEATHER APP</h3>
+      <!--<button id="update">latest weather updates</button>-->
+      <form>
+        <label for="searchValue">City</label>
+        <input type="text" placeholder="city" id="searchValue" required />
+
+        <input type="button" id="newupdate" value="search" />
+      </form>
     </header>
     <main class="flex-container">
       <section class="box-1">
@@ -27,32 +33,49 @@
         </div>
         <br />
         <h1 class="temperature">
-          <span id="temp">T</span>
-          <sup class="sup">o</sup> <sub class="sub">C</sub>
+          <span id="temp">55.55</span>
+          <sup class="sup">0</sup> <sub class="sub">c</sub>
         </h1>
         <br />
-        <p id="description">description</p>
+        <h3 id="description">description</h3>
       </section>
 
       <article class="box-2">
         <ul>
+          <li id="city">City</li>
+          <hr />
           <li id="currweatherCondition">currweatherCondition</li>
+          <hr />
           <li id="speed">windspeed</li>
+          <hr />
           <li id="deg">deg</li>
+          <hr />
           <li id="visibility">visibility</li>
         </ul>
       </article>
       <article class="box-3">
         <ul>
           <li id="feels_like">feels_like</li>
+          <hr />
           <li id="humidity">humidity</li>
+          <hr />
           <li id="pressure">pressure</li>
+          <hr />
           <li id="temp_min">temp_min</li>
+          <hr />
           <li id="temp_max">temp_max</li>
         </ul>
       </article>
     </main>
-    <footer></footer>
+    <footer>made by botanicalcoder</footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
     <script src="/ignore.js"></script>
     <script src="/index.js"></script>
   </body>
