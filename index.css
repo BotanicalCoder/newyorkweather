@@ -6,7 +6,7 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 2em;
-  font-size: xx-large;
+  font-size: large;
   background-color: #424242;
   color: #e2e0e0;
 }
@@ -15,6 +15,7 @@ body {
   flex-direction: row;
   align-items: stretch;
   margin-top: 2em;
+  margin-right: 0em;
 }
 
 .box-1 {
@@ -38,51 +39,76 @@ body {
 }
 
 .header h3 {
-  margin-top: -1.6em;
+  margin-top: 2em;
   text-align: center;
   word-spacing: 2vw;
+}
+
+form {
+  margin-top: 0.5em;
+  margin-left: -0.6em;
+}
+
+form #city {
+  padding: 0.3em;
+  font-size: large;
 }
 
 .iconholder {
   margin-top: 0.3em;
 }
 
-
- .temperature {
-  font-size: 9vh;
-  margin-top: 0em;
-  padding:0em;
-  margin-left:-0.5em;
+#icon {
+  float: left;
 }
-  
-  .sub {
-  font-size: 2.5vh;
+
+.temperature {
+  font-size: x-large;
+  margin-top: 0.1em;
+}
+
+.sub {
+  font-size: 1.5em;
   margin-top: 2em;
-  margin-left: -4em;
 }
 
 .sup {
-  font-size: 5vh;
+  font-size: 0.5em;
   margin-top: -2em;
-  margin-left: 1em;
+}
+ul {
+  padding-inline-start: 0em;
 }
 
-
-
 ul li {
-  text-transform: capitalize;
+  text-transform: none;
   list-style-type: none;
-  padding: 1em;
+  padding: 0.5em;
 
   /* text-decoration: underline;*/
 }
 
-#update {
+#searchValue {
   text-align: center;
   max-width: 50%;
-  padding: 0.5em;
+  padding: 0.3em;
   font-size: large;
   margin-top: 1em;
+  text-transform: capitalize;
+}
+
+#newupdate {
+  text-align: center;
+  max-width: 50%;
+  padding: 0.3em;
+  font-size: large;
+  margin-top: 1em;
+  text-transform: capitalize;
+}
+
+#description {
+  clear: both;
+  padding-left: 4.5em;
   text-transform: capitalize;
 }
 
@@ -91,9 +117,14 @@ ul li {
   body {
     font-family: Georgia, "Times New Roman", Times, serif;
     margin: 1.9em;
-    font-size: xx-large;
+    font-size: small;
     background-color: #424242;
     color: #e2e0e0;
+  }
+
+  .temperature {
+    font-size: xx-large;
+    margin-top: 0.1em;
   }
 
   .flex-container {
@@ -125,25 +156,39 @@ ul li {
     padding: 0.5em;
     margin-bottom: 1em;
   }
-.temperature {
-  font-size: 9vh;
-  margin-top: 0em;
-  padding:0em;
-  margin-left:0em;
+
+  #icon {
+    float: left;
+  }
+
+  #description {
+    clear: both;
+    padding-left: 5.5em;
+    text-transform: capitalize;
+    font-size: large;
+  }
 }
 
+@media only screen and (max-width: 666px) {
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 1.9em;
+    font-size: small;
+    background-color: #424242;
+    color: #e2e0e0;
+  }
 
+  .header h3 {
+    margin-top: 1em;
+    margin-bottom: 0em;
+  }
 
-.sub {
-  font-size: 3.5vh;
-  margin-top: 2em;
-  margin-left: -4em;
-}
+  .temperature {
+    font-size: x-large;
+    margin-top: 0.1em;
+  }
 
-.sup {
-  font-size: 7vh;
-  margin-top: -2em;
-  margin-left: 1em;
-}  
- 
+  #icon {
+    clear: both;
+  }
 }
