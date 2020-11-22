@@ -4,8 +4,6 @@ const setResult = (...data) => {
   localStorage.setItem("Data", JSON.stringify(data));
   getResult();
   displayResult();
-
-  console.log("hiiii");
 };
 
 /*get data from local storage*/
@@ -68,7 +66,6 @@ const displayResult = () => {
   deg_dom.innerHTML = `Wind degree: ${deg}`;
   visibility_dom.innerHTML = `Visibility : ${visibility} m`;
 
-  console.log("result displayed");
 };
 
 const updateUi = () => {
@@ -76,8 +73,6 @@ const updateUi = () => {
 
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&units=metric&appid=${key}`;
 
-  console.log("ui updated");
-  console.log(updateCity);
 
   fetch(url)
     .then(function (result) {
@@ -88,7 +83,7 @@ const updateUi = () => {
       setResult(...weather, main, wind, visibility, name);
     })
     .catch(function (error) {
-      console.error();
+      alert('input a valid city');
     });
 };
 
@@ -107,8 +102,4 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-/*
-{"id": 5128581, "name": "New York City", "state": "NY", "country": "US", 
-"coord": {"lon": -74.005966, "lat": 40.714272}}
 
-https://api.openweathermap.org/data/2.5/weather?id=5128581&appid=key*/
