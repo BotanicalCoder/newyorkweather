@@ -14,7 +14,7 @@ const getResult = () => {
   } /*else {
     return console.log("no data");
   }*/
-  console.log("result displayed");
+
 };
 
 const displayResult = () => {
