@@ -38,10 +38,22 @@ body {
   padding: 1em;
 }
 
-.header h3 {
+.header h2 {
   margin-top: 2em;
   text-align: center;
   word-spacing: 2vw;
+}
+
+
+#error {
+  text-align: center;
+  color: black;
+  margin: 0.5em auto;
+  padding: 0.5em;
+  word-spacing: 1vw;
+  text-transform: uppercase;
+  background-color: pink;
+  display: none;
 }
 
 form {

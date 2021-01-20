@@ -1,9 +1,20 @@
+const errorHandler = () => {
+  document.getElementById("error").style.display = "block";
+  setTimeout(clearError, 5000);
+};
+
+const clearError = () => {
+  document.getElementById("error").style.display = "none";
+};
+
 /*set data from local storage*/
 
 const setResult = (...data) => {
   localStorage.setItem("Data", JSON.stringify(data));
   getResult();
   displayResult();
+
+ 
 };
 
 /*get data from local storage*/
@@ -14,7 +25,7 @@ const getResult = () => {
   } /*else {
     return console.log("no data");
   }*/
-
+  console.log("result displayed");
 };
 
 const displayResult = () => {
@@ -66,6 +77,7 @@ const displayResult = () => {
   deg_dom.innerHTML = `Wind degree: ${deg}`;
   visibility_dom.innerHTML = `Visibility : ${visibility} m`;
 
+  console.log("result displayed");
 };
 
 const updateUi = () => {
@@ -73,6 +85,8 @@ const updateUi = () => {
 
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&units=metric&appid=${key}`;
 
+  console.log("ui updated");
+  console.log(updateCity);
 
   fetch(url)
     .then(function (result) {
@@ -83,7 +97,8 @@ const updateUi = () => {
       setResult(...weather, main, wind, visibility, name);
     })
     .catch(function (error) {
-      alert('input a valid city');
+      console.error();
+      errorHandler();
     });
 };
 
@@ -101,5 +116,3 @@ if ("serviceWorker" in navigator) {
       .catch((err) => console.log("service worker not registered", err));
   });
 }
-
-
